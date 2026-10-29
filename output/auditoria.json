@@ -1,0 +1,19 @@
+{
+  "scope": "Auditoría independiente de gramática y parser; no incluye evaluación del PDF ni de las capturas.",
+  "random_seed": 1148,
+  "earley_comparisons": 840,
+  "earley_agreements": 840,
+  "accepted": 160,
+  "rejected": 680,
+  "nonterminals": 11,
+  "productions": 18,
+  "ll1_occupied_cells": 25,
+  "nullable": [
+    "RestoAnd",
+    "RestoOr",
+    "RestoPrograma"
+  ],
+  "left_recursion": false,
+  "findings": [],
+  "delivery_pending": []
+}

@@ -1,0 +1,229 @@
+{
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 411,
+      "sha256": "5a4df75de1ca6a5284943dcfd341e1fd9851dfeae5688d4f8ed5389507f15f5d"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 64,
+      "sha256": "572b9a790c521f7a582fd81fb60b69fcb533d287c30697dd084b1e0481b8eadb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6046,
+      "sha256": "07b54e47f063e2fc894d3937da49b16016d62587bea548b5e598d3505c31f7a2"
+    },
+    {
+      "path": "casadsl/__init__.py",
+      "bytes": 262,
+      "sha256": "a68f54cc2070784383d798c81ba0afedd0f67cdc0540aa27069982069b96698d"
+    },
+    {
+      "path": "casadsl/__main__.py",
+      "bytes": 3661,
+      "sha256": "9d491ec103b2842695cf8cb0f434ecf57357ea664782dbb04393f4a29f78ecab"
+    },
+    {
+      "path": "casadsl/ast_tools.py",
+      "bytes": 3834,
+      "sha256": "17060e69326ec726ff344871a82d02068b9a1cf674f7707404614bfe881e7206"
+    },
+    {
+      "path": "casadsl/grammar.py",
+      "bytes": 4499,
+      "sha256": "8760ed5fa5e2107bf2b682673a4cb5b9491d848e81f9db34c933def58c94e83e"
+    },
+    {
+      "path": "casadsl/lexer.py",
+      "bytes": 2495,
+      "sha256": "0daa49e751271494a590505c4fc5321feeb095c70630651f8894d96191f12f03"
+    },
+    {
+      "path": "casadsl/parser.py",
+      "bytes": 5825,
+      "sha256": "ce2a70592f3553a3ed3a3582ff7b408079ec6ef615c1a0b1b1dd2a1b724e775d"
+    },
+    {
+      "path": "data/casos.json",
+      "bytes": 6474,
+      "sha256": "f4e375c16be63e0cc66574ed4b154e55a5363d8b13e210026cc378f7c2da307e"
+    },
+    {
+      "path": "data/entrega.json",
+      "bytes": 249,
+      "sha256": "b20b78e0ebc3fd8a7d30457ac1275f4787900d03b620b79b65556bd2db03a029"
+    },
+    {
+      "path": "docs/analisis_completo.json",
+      "bytes": 6534,
+      "sha256": "fad2eb15fef7ae6340fb605052dce55832ba9d1a642eddf834ac99e404a0f4b4"
+    },
+    {
+      "path": "docs/first_follow.json",
+      "bytes": 1363,
+      "sha256": "dcd85b147e8bdde2f6aea5bbb142e5d6f66b13e01a47a5d9831d4f7d6e8ab840"
+    },
+    {
+      "path": "docs/gramatica.txt",
+      "bytes": 550,
+      "sha256": "97fd092a3fe59f837cc0f8e021b9b19a4523ab3831efee8182bb8e6d2f74af0f"
+    },
+    {
+      "path": "docs/guia_defensa.md",
+      "bytes": 5227,
+      "sha256": "09c581caa09240f86947b2fafceebce2f3d8b8edc6ae17d602cdb030c5331322"
+    },
+    {
+      "path": "docs/informe.md",
+      "bytes": 27232,
+      "sha256": "ed71fcc0de090f49fffeee03557f9cdf3b5d4d4ff5621d6753db6a24a2495442"
+    },
+    {
+      "path": "docs/mapeo_codigo.md",
+      "bytes": 3550,
+      "sha256": "e9424a308283d0458416ffa220b02f644f4362cd229527d8762f325db8dd6b39"
+    },
+    {
+      "path": "docs/revision.md",
+      "bytes": 2363,
+      "sha256": "3f9d8c83ab3a659b65d669ee5489e47c993f50ea72e22bbaa0c4aba23319092a"
+    },
+    {
+      "path": "docs/tabla_ll1.csv",
+      "bytes": 430,
+      "sha256": "497664867bcb9fb4a4c8cfe440d9b47d26a68f2366d57607dc6fa9d0a172ae13"
+    },
+    {
+      "path": "examples/demo.casa",
+      "bytes": 214,
+      "sha256": "b1ff74d565c080670141507deb7e0293263223478a11fe522858dfa45b64ac93"
+    },
+    {
+      "path": "examples/error.casa",
+      "bytes": 43,
+      "sha256": "3f1fb08d569468d979fa567cd9aa4674de216700b2d14d6bdf36d188c57020c0"
+    },
+    {
+      "path": "examples/minimo.casa",
+      "bytes": 43,
+      "sha256": "47dc5e32870902ef14a9a9662f94c9c390a85b41fb4ed3d20be465ac653c1c24"
+    },
+    {
+      "path": "output/auditoria.json",
+      "bytes": 468,
+      "sha256": "a61db52e9cb4a1dbd903d41d787f745112ee3572297e54dc11a6a5f099cd3399"
+    },
+    {
+      "path": "output/evidencias/ast_ejemplo.dot",
+      "bytes": 436,
+      "sha256": "91a120f503af2408be944cfd5270fa685004b57fa3e77b1f5306f803cb4237f7"
+    },
+    {
+      "path": "output/evidencias/ast_ejemplo.json",
+      "bytes": 806,
+      "sha256": "0a9c6ac3cc9b991a84170e5f89e3bf1fde7d187c964ae02aa07eacfd1d75c380"
+    },
+    {
+      "path": "output/evidencias/ast_ejemplo.txt",
+      "bytes": 262,
+      "sha256": "bc3746733accb105aa227e278bbadc394aec2c01c1c37ee8f27d754950f8073f"
+    },
+    {
+      "path": "output/evidencias/captura_error.png",
+      "bytes": 45157,
+      "sha256": "6c302eea07965ffc6cbbe40d442121d8ef46742ba634b90307007ff6dd3dd2de"
+    },
+    {
+      "path": "output/evidencias/captura_pruebas.png",
+      "bytes": 56326,
+      "sha256": "3d1928c26997a9e01b45cc7402d3c2934f194795fdd11c147dafe0a83b4433fc"
+    },
+    {
+      "path": "output/evidencias/captura_valido.png",
+      "bytes": 70652,
+      "sha256": "56c84448ea50fbd7f39af5f50ebbad1efdbccad5c4526fc9a9b2f6fe40a23c0b"
+    },
+    {
+      "path": "output/evidencias/demo_error.html",
+      "bytes": 1630,
+      "sha256": "1b65d9454969100cfe6c427b62c6954d6caae917f4fd40e0522b0496fe4525fc"
+    },
+    {
+      "path": "output/evidencias/demo_pruebas.html",
+      "bytes": 1819,
+      "sha256": "ff8bf92fc54d0624461ca2256a32a603497717c734b1333c1c0400809249f923"
+    },
+    {
+      "path": "output/evidencias/demo_valido.html",
+      "bytes": 2120,
+      "sha256": "fe62991f104ba58b7ac748f718051189ceb7a2eb2162ee03514ef1931dde8238"
+    },
+    {
+      "path": "output/evidencias/ejecuciones.json",
+      "bytes": 10875,
+      "sha256": "0383dff6f4c4163aa6f6a42939ab8028b6bea73b66b18c5cc8f5c890fe6f9c55"
+    },
+    {
+      "path": "output/evidencias/pruebas_unittest.txt",
+      "bytes": 7293,
+      "sha256": "e740d2a2d259aa7708751736c40c3e0cb3a18230fc4614c59d84036dc2247468"
+    },
+    {
+      "path": "output/pdf/informe_casadsl.pdf",
+      "bytes": 333615,
+      "sha256": "e40b703b1984f05a5acf8d7d37f32c8f3f2a635be3be1e6b5573a17b51e9e18e"
+    },
+    {
+      "path": "output/resultados_pruebas.csv",
+      "bytes": 7622,
+      "sha256": "2f24edda1cbc75b95cd9676bb53cd19dff2b248e58aa26bc11dbb7d1437004b1"
+    },
+    {
+      "path": "output/resultados_pruebas.json",
+      "bytes": 14171,
+      "sha256": "c51336dfe14faa99f70bd201fb82fb97ffdc6006ceebe88c9123fe7808a14a4e"
+    },
+    {
+      "path": "output/resultados_pruebas.md",
+      "bytes": 11117,
+      "sha256": "6a69a86031f6649654430602fc214b7756d997c7837f858c538aafd998ec3c7c"
+    },
+    {
+      "path": "requirements-docs.txt",
+      "bytes": 107,
+      "sha256": "2e8e42bf53239636ebf58e10ec85e7f62280762ce76fba80f6e5709efbda1424"
+    },
+    {
+      "path": "scripts/build_evidence.py",
+      "bytes": 5032,
+      "sha256": "e9a07578ca789d2a26699c381b8ca2ba9536aeac67881f0c1abb6c9849db6ef4"
+    },
+    {
+      "path": "scripts/build_report.py",
+      "bytes": 30795,
+      "sha256": "27875571c8f0597c9387cef5090040cb003794e471ab1ecfe5b680fc82b3251d"
+    },
+    {
+      "path": "scripts/package_project.py",
+      "bytes": 1886,
+      "sha256": "3baf2815e8ae1f5c65bea67582ea20b5eb71ac80254ea95e3fce1d8178823934"
+    },
+    {
+      "path": "scripts/run_cases.py",
+      "bytes": 4075,
+      "sha256": "bf2364f5f3b3d16f5dee9a6a5b0f8d9c8737bfaef8a4e4be4ed75d53aa691f60"
+    },
+    {
+      "path": "tests/test_casadsl.py",
+      "bytes": 9263,
+      "sha256": "432830a9a7179f1c03eb5318c29b26b8093d7ae3aae90e4e05d400921d5bbc59"
+    },
+    {
+      "path": "tests/test_cli_limits.py",
+      "bytes": 3233,
+      "sha256": "3d7fcf76db8c0bef6558e038ea77663a997aebfbe0209f8261351bae36e59e7e"
+    }
+  ]
+}

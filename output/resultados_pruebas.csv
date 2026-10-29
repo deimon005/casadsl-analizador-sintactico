@@ -1,0 +1,42 @@
+﻿id,category,source,expected,actual,passed,observation,detail
+V01,valido,WHEN temperatura > 28 THEN encender ventilador;,valid,valid,True,Comparación mayor que y acción con verbo y destino.,Programa aceptado: 1 regla(s).
+V02,valido,WHEN humedad < 40 THEN activar riego;,valid,valid,True,Comparación menor que.,Programa aceptado: 1 regla(s).
+V03,valido,WHEN luz >= 80 THEN cerrar persiana;,valid,valid,True,Operador compuesto mayor o igual.,Programa aceptado: 1 regla(s).
+V04,valido,WHEN bateria <= 15 THEN activar ahorro;,valid,valid,True,Operador compuesto menor o igual.,Programa aceptado: 1 regla(s).
+V05,valido,WHEN movimiento == TRUE THEN activar alarma;,valid,valid,True,Igualdad con valor booleano verdadero.,Programa aceptado: 1 regla(s).
+V06,valido,WHEN puerta != FALSE THEN encender luz;,valid,valid,True,Desigualdad con valor booleano falso.,Programa aceptado: 1 regla(s).
+V07,valido,WHEN temperatura > 28 AND humedad < 40 THEN encender ventilador;,valid,valid,True,Construcción compuesta con AND.,Programa aceptado: 1 regla(s).
+V08,valido,WHEN humo == TRUE OR temperatura > 60 THEN activar alarma;,valid,valid,True,Construcción compuesta con OR.,Programa aceptado: 1 regla(s).
+V09,valido,WHEN NOT movimiento == TRUE THEN apagar luz;,valid,valid,True,Extensión NOT aplicada a una comparación.,Programa aceptado: 1 regla(s).
+V10,valido,WHEN (temperatura > 28 OR humedad < 40) AND puerta == FALSE THEN activar clima;,valid,valid,True,Paréntesis cambian la agrupación frente a la precedencia normal.,Programa aceptado: 1 regla(s).
+V11,valido,WHEN NOT (humo == FALSE AND puerta == TRUE) THEN activar alarma;,valid,valid,True,Integración de NOT con agrupación y operador binario.,Programa aceptado: 1 regla(s).
+V12,valido,"WHEN temperatura > 28 THEN encender ventilador;
+WHEN movimiento == TRUE THEN activar alarma;",valid,valid,True,Programa compuesto por dos reglas.,Programa aceptado: 2 regla(s).
+I01,invalido,temperatura > 28 THEN encender ventilador;,syntax_error,syntax_error,True,Falta WHEN al comienzo de la regla.,"Error sintáctico en línea 1, columna 1: se esperaba WHEN para iniciar una regla (el programa no puede estar vacío); se encontró 'temperatura' (ID)."
+I02,invalido,WHEN temperatura > 28 encender ventilador;,syntax_error,syntax_error,True,Falta la palabra reservada THEN.,"Error sintáctico en línea 1, columna 23: se esperaba AND, OR, THEN o ')' después de la comparación; se encontró 'encender' (ID)."
+I03,invalido,WHEN temperatura > THEN encender ventilador;,syntax_error,syntax_error,True,Falta un valor después del operador relacional.,"Error sintáctico en línea 1, columna 20: se esperaba un valor NUM, TRUE o FALSE después del operador relacional; se encontró 'THEN' (THEN)."
+I04,invalido,WHEN temperatura 28 THEN encender ventilador;,syntax_error,syntax_error,True,Falta el operador relacional.,"Error sintáctico en línea 1, columna 18: se esperaba un operador relacional: >, <, >=, <=, == o !=; se encontró '28' (NUM)."
+I05,invalido,WHEN temperatura > 28 THEN encender ventilador,syntax_error,syntax_error,True,Falta el punto y coma final.,"Error sintáctico en línea 1, columna 47: se esperaba ';' al final de la regla; se encontró fin de entrada."
+I06,invalido,WHEN temperatura > 28 THEN encender;,syntax_error,syntax_error,True,La acción carece de destino.,"Error sintáctico en línea 1, columna 36: se esperaba un identificador de dispositivo después de la acción; se encontró ';' (PUNTO_COMA)."
+I07,invalido,WHEN temperatura > 28 THEN 12 ventilador;,syntax_error,syntax_error,True,El verbo de la acción debe ser un identificador.,"Error sintáctico en línea 1, columna 28: se esperaba un identificador de acción después de THEN; se encontró '12' (NUM)."
+I08,invalido,WHEN () THEN encender ventilador;,syntax_error,syntax_error,True,No se permite una condición vacía entre paréntesis.,"Error sintáctico en línea 1, columna 7: se esperaba un identificador de sensor, NOT o '(' para iniciar una condición; se encontró ')' (PARENT_DER)."
+I09,invalido,WHEN temperatura > 28 AND THEN encender ventilador;,syntax_error,syntax_error,True,AND necesita un factor a su derecha.,"Error sintáctico en línea 1, columna 27: se esperaba un identificador de sensor, NOT o '(' para iniciar una condición; se encontró 'THEN' (THEN)."
+I10,invalido,WHEN temperatura > 28 < 40 THEN encender ventilador;,syntax_error,syntax_error,True,No se permiten comparaciones encadenadas.,"Error sintáctico en línea 1, columna 23: se esperaba AND, OR, THEN o ')' después de la comparación; se encontró '<' (OP_REL)."
+I11,invalido,WHEN temperatura > 28 THEN encender ventilador; basura,syntax_error,syntax_error,True,Se rechazan tokens sobrantes después de un programa válido.,"Error sintáctico en línea 1, columna 49: se esperaba WHEN para otra regla o fin de entrada; se encontró 'basura' (ID)."
+I12,invalido,WHEN (temperatura > 28 THEN encender ventilador;,syntax_error,syntax_error,True,Falta el paréntesis de cierre.,"Error sintáctico en línea 1, columna 24: se esperaba ')' para cerrar la agrupación; se encontró 'THEN' (THEN)."
+L01,limite,,syntax_error,syntax_error,True,Entrada de longitud cero: se exige al menos una regla.,"Error sintáctico en línea 1, columna 1: se esperaba WHEN para iniciar una regla (el programa no puede estar vacío); se encontró fin de entrada."
+L02,limite," 	
+  ",syntax_error,syntax_error,True,Una entrada formada solo por espacios tampoco es un programa.,"Error sintáctico en línea 2, columna 3: se esperaba WHEN para iniciar una regla (el programa no puede estar vacío); se encontró fin de entrada."
+L03,limite,WHEN x > 0 THEN a b;,valid,valid,True,Identificadores de un carácter y el menor entero no negativo.,Programa aceptado: 1 regla(s).
+L04,limite,wHeN _sensor1 == fAlSe tHeN Apagar Luz_2;,valid,valid,True,Reservadas sin distinción de mayúsculas; identificadores con guion bajo y dígitos.,Programa aceptado: 1 regla(s).
+L05,limite,"	WHEN
+ x>=10
+ THEN	activar dispositivo;
+",valid,valid,True,"Separadores mixtos, saltos CRLF y operadores sin espacios.",Programa aceptado: 1 regla(s).
+L06,limite,WHEN NOT NOT (((x == 0))) THEN a b;,valid,valid,True,Negación repetida y tres niveles de agrupación.,Programa aceptado: 1 regla(s).
+L07,limite,WHEN x == 000 THEN a b;,valid,valid,True,Los ceros iniciales son permitidos por la especificación léxica.,Programa aceptado: 1 regla(s).
+L08,limite,WHEN x > 0 THEN a b;;,syntax_error,syntax_error,True,No hay sentencias vacías: un punto y coma adicional es inválido.,"Error sintáctico en línea 1, columna 21: se esperaba WHEN para otra regla o fin de entrada; se encontró ';' (PUNTO_COMA)."
+X01,lexico,WHEN temperatura > -1 THEN encender ventilador;,lexical_error,lexical_error,True,Los enteros negativos no pertenecen al lenguaje; el signo menos es desconocido.,"Error léxico en línea 1, columna 20: símbolo no reconocido '-'."
+X02,lexico,WHEN temperatura > 28.5 THEN encender ventilador;,lexical_error,lexical_error,True,Los números decimales no pertenecen al lenguaje; el punto es desconocido.,"Error léxico en línea 1, columna 22: símbolo no reconocido '.'."
+X03,lexico,WHEN señal == TRUE THEN activar alarma;,lexical_error,lexical_error,True,"Los identificadores admiten solamente letras ASCII, dígitos y guion bajo.","Error léxico en línea 1, columna 8: símbolo no reconocido 'ñ'."
+X04,lexico,WHEN x > 1 THEN a b; # comentario,lexical_error,lexical_error,True,Los comentarios no forman parte de las extensiones elegidas.,"Error léxico en línea 1, columna 22: símbolo no reconocido '#'."
