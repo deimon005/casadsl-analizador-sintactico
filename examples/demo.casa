@@ -1,0 +1,3 @@
+WHEN temperatura > 28 AND NOT (humedad < 40 OR ventana == TRUE) THEN encender ventilador;
+WHEN movimiento == TRUE OR puerta != FALSE THEN activar alarma;
+WHEN luz <= 15 AND presencia == TRUE THEN encender lampara;
