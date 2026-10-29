@@ -1,0 +1,3 @@
+# Solo para regenerar el informe; el parser y sus pruebas no los necesitan.
+reportlab>=4,<5
+Pillow>=10,<13
