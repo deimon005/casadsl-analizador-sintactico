@@ -1,0 +1,21 @@
+digraph AST {
+  rankdir=TB;
+  node [shape=box, fontname="Arial"];
+  n0 [label="Program"];
+  n1 [label="Rule"];
+  n0 -> n1;
+  n2 [label="NOT"];
+  n1 -> n2;
+  n3 [label="OR"];
+  n2 -> n3;
+  n4 [label="Compare: temperatura >"];
+  n3 -> n4;
+  n5 [label="Number: 28"];
+  n4 -> n5;
+  n6 [label="Compare: humedad <"];
+  n3 -> n6;
+  n7 [label="Number: 40"];
+  n6 -> n7;
+  n8 [label="Action: activar alarma"];
+  n1 -> n8;
+}

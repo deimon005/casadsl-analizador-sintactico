@@ -1,0 +1,11 @@
+WHEN NOT (temperatura > 28 OR humedad < 40) THEN activar alarma;
+
+Program
+`- Rule
+   |- NOT
+   |  `- OR
+   |     |- Compare: temperatura >
+   |     |  `- Number: 28
+   |     `- Compare: humedad <
+   |        `- Number: 40
+   `- Action: activar alarma

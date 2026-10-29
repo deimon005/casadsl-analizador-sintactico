@@ -1,0 +1,38 @@
+{
+  "type": "Program",
+  "rules": [
+    {
+      "type": "Rule",
+      "condition": {
+        "type": "Not",
+        "operand": {
+          "type": "Binary",
+          "operator": "OR",
+          "left": {
+            "type": "Compare",
+            "sensor": "temperatura",
+            "operator": ">",
+            "value": {
+              "type": "Number",
+              "value": 28
+            }
+          },
+          "right": {
+            "type": "Compare",
+            "sensor": "humedad",
+            "operator": "<",
+            "value": {
+              "type": "Number",
+              "value": 40
+            }
+          }
+        }
+      },
+      "action": {
+        "type": "Action",
+        "verb": "activar",
+        "target": "alarma"
+      }
+    }
+  ]
+}

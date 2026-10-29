@@ -1,0 +1,40 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<title>CasaDSL | Evidencias de ejecución</title><style>
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#172b45;font:16px Arial,sans-serif}
+main{max-width:1180px;margin:auto;padding:32px}header{border-left:6px solid #007c83;padding-left:18px;margin-bottom:24px}
+.tag{font-size:12px;letter-spacing:2px;color:#007c83;font-weight:bold}h1{font-size:30px;margin:8px 0}
+p{line-height:1.5;margin:10px 0}article{background:#142439;color:#eaf1f8;border-radius:9px;margin:18px 0;overflow:hidden}
+.command{padding:15px 19px;background:#203852;font:14px Consolas,monospace;color:#8ce4d4}
+pre{font:14px/1.45 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:20px}
+.exit{padding:11px 20px;background:#1b3048;font-size:12px;color:#c4d5e5}
+footer{font-size:12px;color:#52647a;line-height:1.5}</style><main><header>
+<div class="tag">CASADSL / INFO1148</div><h1>Programa válido y AST</h1><p>Tres reglas aceptadas; se conserva la agrupación de NOT, AND y OR.</p></header><article><div class="command">python -m casadsl examples/demo.casa --ast</div><pre>Entrada válida: 3 regla(s).
+Program
+|- Rule
+|  |- AND
+|  |  |- Compare: temperatura &gt;
+|  |  |  `- Number: 28
+|  |  `- NOT
+|  |     `- OR
+|  |        |- Compare: humedad &lt;
+|  |        |  `- Number: 40
+|  |        `- Compare: ventana ==
+|  |           `- Boolean: TRUE
+|  `- Action: encender ventilador
+|- Rule
+|  |- OR
+|  |  |- Compare: movimiento ==
+|  |  |  `- Boolean: TRUE
+|  |  `- Compare: puerta !=
+|  |     `- Boolean: FALSE
+|  `- Action: activar alarma
+`- Rule
+   |- AND
+   |  |- Compare: luz &lt;=
+   |  |  `- Number: 15
+   |  `- Compare: presencia ==
+   |     `- Boolean: TRUE
+   `- Action: encender lampara</pre><div class="exit">Código de salida: 0</div></article>
+<footer>Vista de evidencias: las salidas se capturaron ejecutando el código del proyecto.
+Los registros íntegros se encuentran junto a estas vistas en ejecuciones.json y pruebas_unittest.txt.
+No se simula la ejecución de dispositivos.</footer></main></html>

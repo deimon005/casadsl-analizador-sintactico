@@ -1,0 +1,110 @@
+test_and_has_priority_over_or (test_casadsl.AstTests.test_and_has_priority_over_or) ... ok
+test_boolean_ast_values_are_bool (test_casadsl.AstTests.test_boolean_ast_values_are_bool) ... ok
+test_identifiers_preserve_case (test_casadsl.AstTests.test_identifiers_preserve_case) ... ok
+test_left_associativity_and (test_casadsl.AstTests.test_left_associativity_and) ... ok
+test_left_associativity_or (test_casadsl.AstTests.test_left_associativity_or) ... ok
+test_not_can_wrap_compound_expression (test_casadsl.AstTests.test_not_can_wrap_compound_expression) ... ok
+test_not_has_priority_over_and (test_casadsl.AstTests.test_not_has_priority_over_and) ... ok
+test_parentheses_override_priority (test_casadsl.AstTests.test_parentheses_override_priority) ... ok
+test_single_rule_structure (test_casadsl.AstTests.test_single_rule_structure) ... ok
+test_token_api_accepts_lexed_program (test_casadsl.AstTests.test_token_api_accepts_lexed_program) ... ok
+test_I01 (test_casadsl.CorpusTests.test_I01)
+Falta WHEN al comienzo de la regla. ... ok
+test_I02 (test_casadsl.CorpusTests.test_I02)
+Falta la palabra reservada THEN. ... ok
+test_I03 (test_casadsl.CorpusTests.test_I03)
+Falta un valor después del operador relacional. ... ok
+test_I04 (test_casadsl.CorpusTests.test_I04)
+Falta el operador relacional. ... ok
+test_I05 (test_casadsl.CorpusTests.test_I05)
+Falta el punto y coma final. ... ok
+test_I06 (test_casadsl.CorpusTests.test_I06)
+La acción carece de destino. ... ok
+test_I07 (test_casadsl.CorpusTests.test_I07)
+El verbo de la acción debe ser un identificador. ... ok
+test_I08 (test_casadsl.CorpusTests.test_I08)
+No se permite una condición vacía entre paréntesis. ... ok
+test_I09 (test_casadsl.CorpusTests.test_I09)
+AND necesita un factor a su derecha. ... ok
+test_I10 (test_casadsl.CorpusTests.test_I10)
+No se permiten comparaciones encadenadas. ... ok
+test_I11 (test_casadsl.CorpusTests.test_I11)
+Se rechazan tokens sobrantes después de un programa válido. ... ok
+test_I12 (test_casadsl.CorpusTests.test_I12)
+Falta el paréntesis de cierre. ... ok
+test_L01 (test_casadsl.CorpusTests.test_L01)
+Entrada de longitud cero: se exige al menos una regla. ... ok
+test_L02 (test_casadsl.CorpusTests.test_L02)
+Una entrada formada solo por espacios tampoco es un programa. ... ok
+test_L03 (test_casadsl.CorpusTests.test_L03)
+Identificadores de un carácter y el menor entero no negativo. ... ok
+test_L04 (test_casadsl.CorpusTests.test_L04)
+Reservadas sin distinción de mayúsculas; identificadores con guion bajo y dígitos. ... ok
+test_L05 (test_casadsl.CorpusTests.test_L05)
+Separadores mixtos, saltos CRLF y operadores sin espacios. ... ok
+test_L06 (test_casadsl.CorpusTests.test_L06)
+Negación repetida y tres niveles de agrupación. ... ok
+test_L07 (test_casadsl.CorpusTests.test_L07)
+Los ceros iniciales son permitidos por la especificación léxica. ... ok
+test_L08 (test_casadsl.CorpusTests.test_L08)
+No hay sentencias vacías: un punto y coma adicional es inválido. ... ok
+test_V01 (test_casadsl.CorpusTests.test_V01)
+Comparación mayor que y acción con verbo y destino. ... ok
+test_V02 (test_casadsl.CorpusTests.test_V02)
+Comparación menor que. ... ok
+test_V03 (test_casadsl.CorpusTests.test_V03)
+Operador compuesto mayor o igual. ... ok
+test_V04 (test_casadsl.CorpusTests.test_V04)
+Operador compuesto menor o igual. ... ok
+test_V05 (test_casadsl.CorpusTests.test_V05)
+Igualdad con valor booleano verdadero. ... ok
+test_V06 (test_casadsl.CorpusTests.test_V06)
+Desigualdad con valor booleano falso. ... ok
+test_V07 (test_casadsl.CorpusTests.test_V07)
+Construcción compuesta con AND. ... ok
+test_V08 (test_casadsl.CorpusTests.test_V08)
+Construcción compuesta con OR. ... ok
+test_V09 (test_casadsl.CorpusTests.test_V09)
+Extensión NOT aplicada a una comparación. ... ok
+test_V10 (test_casadsl.CorpusTests.test_V10)
+Paréntesis cambian la agrupación frente a la precedencia normal. ... ok
+test_V11 (test_casadsl.CorpusTests.test_V11)
+Integración de NOT con agrupación y operador binario. ... ok
+test_V12 (test_casadsl.CorpusTests.test_V12)
+Programa compuesto por dos reglas. ... ok
+test_X01 (test_casadsl.CorpusTests.test_X01)
+Los enteros negativos no pertenecen al lenguaje; el signo menos es desconocido. ... ok
+test_X02 (test_casadsl.CorpusTests.test_X02)
+Los números decimales no pertenecen al lenguaje; el punto es desconocido. ... ok
+test_X03 (test_casadsl.CorpusTests.test_X03)
+Los identificadores admiten solamente letras ASCII, dígitos y guion bajo. ... ok
+test_X04 (test_casadsl.CorpusTests.test_X04)
+Los comentarios no forman parte de las extensiones elegidas. ... ok
+test_eof_in_error_is_human_readable (test_casadsl.ErrorTests.test_eof_in_error_is_human_readable) ... ok
+test_missing_target_reports_source_location (test_casadsl.ErrorTests.test_missing_target_reports_source_location) ... ok
+test_missing_then_reports_expected_keyword (test_casadsl.ErrorTests.test_missing_then_reports_expected_keyword) ... ok
+test_first_all_nonterminals (test_casadsl.GrammarTests.test_first_all_nonterminals) ... ok
+test_follow_all_nonterminals (test_casadsl.GrammarTests.test_follow_all_nonterminals) ... ok
+test_table_has_expected_epsilon_and_factor_entries (test_casadsl.GrammarTests.test_table_has_expected_epsilon_and_factor_entries) ... ok
+test_table_parser_agrees_with_recursive_parser_on_corpus (test_casadsl.GrammarTests.test_table_parser_agrees_with_recursive_parser_on_corpus)
+Un reconocedor por pila contrasta el parser manual con la tabla formal. ... ok
+test_crlf_positions (test_casadsl.LexerTests.test_crlf_positions) ... ok
+test_eof_is_explicit (test_casadsl.LexerTests.test_eof_is_explicit) ... ok
+test_longest_relational_operators (test_casadsl.LexerTests.test_longest_relational_operators) ... ok
+test_reject_unknown_character_at_exact_line (test_casadsl.LexerTests.test_reject_unknown_character_at_exact_line) ... ok
+test_reservadas_no_confunden_prefijos (test_casadsl.LexerTests.test_reservadas_no_confunden_prefijos) ... ok
+test_tab_is_one_source_column (test_casadsl.LexerTests.test_tab_is_one_source_column) ... ok
+test_grammar_json_is_complete (test_cli_limits.CliTests.test_grammar_json_is_complete) ... ok
+test_invalid_input_is_reported_on_stderr (test_cli_limits.CliTests.test_invalid_input_is_reported_on_stderr) ... ok
+test_io_error_has_distinct_exit_code (test_cli_limits.CliTests.test_io_error_has_distinct_exit_code) ... ok
+test_json_output_is_machine_readable (test_cli_limits.CliTests.test_json_output_is_machine_readable) ... ok
+test_stdin_is_supported (test_cli_limits.CliTests.test_stdin_is_supported) ... ok
+test_deep_nesting_at_supported_limit (test_cli_limits.ResourceLimitTests.test_deep_nesting_at_supported_limit) ... ok
+test_excessive_nesting_returns_parse_error (test_cli_limits.ResourceLimitTests.test_excessive_nesting_returns_parse_error) ... ok
+test_literal_at_digit_limit_is_accepted (test_cli_limits.ResourceLimitTests.test_literal_at_digit_limit_is_accepted) ... ok
+test_literal_over_digit_limit_has_useful_lexical_error (test_cli_limits.ResourceLimitTests.test_literal_over_digit_limit_has_useful_lexical_error) ... ok
+
+----------------------------------------------------------------------
+Ran 68 tests in 0.014s
+
+OK
