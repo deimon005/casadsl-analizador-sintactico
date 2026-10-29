@@ -1,0 +1,18 @@
+P01  Programa -> Regla RestoPrograma
+P02  RestoPrograma -> Regla RestoPrograma
+P03  RestoPrograma -> ε
+P04  Regla -> WHEN Expr THEN Accion PUNTO_COMA
+P05  Expr -> Termino RestoOr
+P06  RestoOr -> OR Termino RestoOr
+P07  RestoOr -> ε
+P08  Termino -> Factor RestoAnd
+P09  RestoAnd -> AND Factor RestoAnd
+P10  RestoAnd -> ε
+P11  Factor -> NOT Factor
+P12  Factor -> PARENT_IZQ Expr PARENT_DER
+P13  Factor -> Comparacion
+P14  Comparacion -> ID OP_REL Valor
+P15  Valor -> NUM
+P16  Valor -> TRUE
+P17  Valor -> FALSE
+P18  Accion -> ID ID

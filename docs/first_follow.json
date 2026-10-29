@@ -1,0 +1,99 @@
+{
+  "first": {
+    "Programa": [
+      "WHEN"
+    ],
+    "RestoPrograma": [
+      "WHEN",
+      "ε"
+    ],
+    "Regla": [
+      "WHEN"
+    ],
+    "Expr": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "RestoOr": [
+      "OR",
+      "ε"
+    ],
+    "Termino": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "RestoAnd": [
+      "AND",
+      "ε"
+    ],
+    "Factor": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "Comparacion": [
+      "ID"
+    ],
+    "Valor": [
+      "FALSE",
+      "NUM",
+      "TRUE"
+    ],
+    "Accion": [
+      "ID"
+    ]
+  },
+  "follow": {
+    "Programa": [
+      "EOF"
+    ],
+    "RestoPrograma": [
+      "EOF"
+    ],
+    "Regla": [
+      "EOF",
+      "WHEN"
+    ],
+    "Expr": [
+      "PARENT_DER",
+      "THEN"
+    ],
+    "RestoOr": [
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Termino": [
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "RestoAnd": [
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Factor": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Comparacion": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Valor": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Accion": [
+      "PUNTO_COMA"
+    ]
+  }
+}

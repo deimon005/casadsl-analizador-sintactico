@@ -1,0 +1,408 @@
+{
+  "start": "Programa",
+  "epsilon": "ε",
+  "end": "EOF",
+  "nonterminals": [
+    "Programa",
+    "RestoPrograma",
+    "Regla",
+    "Expr",
+    "RestoOr",
+    "Termino",
+    "RestoAnd",
+    "Factor",
+    "Comparacion",
+    "Valor",
+    "Accion"
+  ],
+  "terminals": [
+    "AND",
+    "FALSE",
+    "ID",
+    "NOT",
+    "NUM",
+    "OP_REL",
+    "OR",
+    "PARENT_DER",
+    "PARENT_IZQ",
+    "PUNTO_COMA",
+    "THEN",
+    "TRUE",
+    "WHEN"
+  ],
+  "grammar": {
+    "Programa": [
+      [
+        "Regla",
+        "RestoPrograma"
+      ]
+    ],
+    "RestoPrograma": [
+      [
+        "Regla",
+        "RestoPrograma"
+      ],
+      []
+    ],
+    "Regla": [
+      [
+        "WHEN",
+        "Expr",
+        "THEN",
+        "Accion",
+        "PUNTO_COMA"
+      ]
+    ],
+    "Expr": [
+      [
+        "Termino",
+        "RestoOr"
+      ]
+    ],
+    "RestoOr": [
+      [
+        "OR",
+        "Termino",
+        "RestoOr"
+      ],
+      []
+    ],
+    "Termino": [
+      [
+        "Factor",
+        "RestoAnd"
+      ]
+    ],
+    "RestoAnd": [
+      [
+        "AND",
+        "Factor",
+        "RestoAnd"
+      ],
+      []
+    ],
+    "Factor": [
+      [
+        "NOT",
+        "Factor"
+      ],
+      [
+        "PARENT_IZQ",
+        "Expr",
+        "PARENT_DER"
+      ],
+      [
+        "Comparacion"
+      ]
+    ],
+    "Comparacion": [
+      [
+        "ID",
+        "OP_REL",
+        "Valor"
+      ]
+    ],
+    "Valor": [
+      [
+        "NUM"
+      ],
+      [
+        "TRUE"
+      ],
+      [
+        "FALSE"
+      ]
+    ],
+    "Accion": [
+      [
+        "ID",
+        "ID"
+      ]
+    ]
+  },
+  "first": {
+    "Programa": [
+      "WHEN"
+    ],
+    "RestoPrograma": [
+      "WHEN",
+      "ε"
+    ],
+    "Regla": [
+      "WHEN"
+    ],
+    "Expr": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "RestoOr": [
+      "OR",
+      "ε"
+    ],
+    "Termino": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "RestoAnd": [
+      "AND",
+      "ε"
+    ],
+    "Factor": [
+      "ID",
+      "NOT",
+      "PARENT_IZQ"
+    ],
+    "Comparacion": [
+      "ID"
+    ],
+    "Valor": [
+      "FALSE",
+      "NUM",
+      "TRUE"
+    ],
+    "Accion": [
+      "ID"
+    ]
+  },
+  "follow": {
+    "Programa": [
+      "EOF"
+    ],
+    "RestoPrograma": [
+      "EOF"
+    ],
+    "Regla": [
+      "EOF",
+      "WHEN"
+    ],
+    "Expr": [
+      "PARENT_DER",
+      "THEN"
+    ],
+    "RestoOr": [
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Termino": [
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "RestoAnd": [
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Factor": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Comparacion": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Valor": [
+      "AND",
+      "OR",
+      "PARENT_DER",
+      "THEN"
+    ],
+    "Accion": [
+      "PUNTO_COMA"
+    ]
+  },
+  "table": [
+    {
+      "nonterminal": "Programa",
+      "lookahead": "WHEN",
+      "production": [
+        "Regla",
+        "RestoPrograma"
+      ]
+    },
+    {
+      "nonterminal": "RestoPrograma",
+      "lookahead": "WHEN",
+      "production": [
+        "Regla",
+        "RestoPrograma"
+      ]
+    },
+    {
+      "nonterminal": "RestoPrograma",
+      "lookahead": "EOF",
+      "production": []
+    },
+    {
+      "nonterminal": "Regla",
+      "lookahead": "WHEN",
+      "production": [
+        "WHEN",
+        "Expr",
+        "THEN",
+        "Accion",
+        "PUNTO_COMA"
+      ]
+    },
+    {
+      "nonterminal": "Expr",
+      "lookahead": "ID",
+      "production": [
+        "Termino",
+        "RestoOr"
+      ]
+    },
+    {
+      "nonterminal": "Expr",
+      "lookahead": "NOT",
+      "production": [
+        "Termino",
+        "RestoOr"
+      ]
+    },
+    {
+      "nonterminal": "Expr",
+      "lookahead": "PARENT_IZQ",
+      "production": [
+        "Termino",
+        "RestoOr"
+      ]
+    },
+    {
+      "nonterminal": "RestoOr",
+      "lookahead": "OR",
+      "production": [
+        "OR",
+        "Termino",
+        "RestoOr"
+      ]
+    },
+    {
+      "nonterminal": "RestoOr",
+      "lookahead": "PARENT_DER",
+      "production": []
+    },
+    {
+      "nonterminal": "RestoOr",
+      "lookahead": "THEN",
+      "production": []
+    },
+    {
+      "nonterminal": "Termino",
+      "lookahead": "ID",
+      "production": [
+        "Factor",
+        "RestoAnd"
+      ]
+    },
+    {
+      "nonterminal": "Termino",
+      "lookahead": "NOT",
+      "production": [
+        "Factor",
+        "RestoAnd"
+      ]
+    },
+    {
+      "nonterminal": "Termino",
+      "lookahead": "PARENT_IZQ",
+      "production": [
+        "Factor",
+        "RestoAnd"
+      ]
+    },
+    {
+      "nonterminal": "RestoAnd",
+      "lookahead": "AND",
+      "production": [
+        "AND",
+        "Factor",
+        "RestoAnd"
+      ]
+    },
+    {
+      "nonterminal": "RestoAnd",
+      "lookahead": "OR",
+      "production": []
+    },
+    {
+      "nonterminal": "RestoAnd",
+      "lookahead": "PARENT_DER",
+      "production": []
+    },
+    {
+      "nonterminal": "RestoAnd",
+      "lookahead": "THEN",
+      "production": []
+    },
+    {
+      "nonterminal": "Factor",
+      "lookahead": "NOT",
+      "production": [
+        "NOT",
+        "Factor"
+      ]
+    },
+    {
+      "nonterminal": "Factor",
+      "lookahead": "PARENT_IZQ",
+      "production": [
+        "PARENT_IZQ",
+        "Expr",
+        "PARENT_DER"
+      ]
+    },
+    {
+      "nonterminal": "Factor",
+      "lookahead": "ID",
+      "production": [
+        "Comparacion"
+      ]
+    },
+    {
+      "nonterminal": "Comparacion",
+      "lookahead": "ID",
+      "production": [
+        "ID",
+        "OP_REL",
+        "Valor"
+      ]
+    },
+    {
+      "nonterminal": "Valor",
+      "lookahead": "NUM",
+      "production": [
+        "NUM"
+      ]
+    },
+    {
+      "nonterminal": "Valor",
+      "lookahead": "TRUE",
+      "production": [
+        "TRUE"
+      ]
+    },
+    {
+      "nonterminal": "Valor",
+      "lookahead": "FALSE",
+      "production": [
+        "FALSE"
+      ]
+    },
+    {
+      "nonterminal": "Accion",
+      "lookahead": "ID",
+      "production": [
+        "ID",
+        "ID"
+      ]
+    }
+  ],
+  "conflicts": []
+}

@@ -1,0 +1,12 @@
+﻿No terminal,AND,FALSE,ID,NOT,NUM,OP_REL,OR,PARENT_DER,PARENT_IZQ,PUNTO_COMA,THEN,TRUE,WHEN,EOF
+Programa,,,,,,,,,,,,,P01,
+RestoPrograma,,,,,,,,,,,,,P02,P03
+Regla,,,,,,,,,,,,,P04,
+Expr,,,P05,P05,,,,,P05,,,,,
+RestoOr,,,,,,,P06,P07,,,P07,,,
+Termino,,,P08,P08,,,,,P08,,,,,
+RestoAnd,P09,,,,,,P10,P10,,,P10,,,
+Factor,,,P13,P11,,,,,P12,,,,,
+Comparacion,,,P14,,,,,,,,,,,
+Valor,,P17,,,P15,,,,,,,P16,,
+Accion,,,P18,,,,,,,,,,,
