@@ -12,7 +12,7 @@ Informe de proyecto grupal. Python, gramática libre de contexto, FIRST/FOLLOW, 
 | --- | --- |
 | Integrantes | José Jiménez, Franco Oyarzo, Demian Quezada |
 | Asignatura | Teoría de la Computación - INFO1148 |
-| Preparación | 2026-10-29 (no corresponde a una fecha límite del curso) |
+| Preparación | 2026-10-29 |
 | Repositorio | https://github.com/deimon005/casadsl-analizador-sintactico |
 | Validación | 36/36 casos documentados; 68 pruebas automatizadas aprobadas. |
 
