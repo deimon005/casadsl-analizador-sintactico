@@ -77,8 +77,8 @@
     },
     {
       "path": "docs/informe.md",
-      "bytes": 27232,
-      "sha256": "ed71fcc0de090f49fffeee03557f9cdf3b5d4d4ff5621d6753db6a24a2495442"
+      "bytes": 27185,
+      "sha256": "f3d3c8369e7234806a4c8fb46c93112c7825f622b8c038a81de7b8e5916e9198"
     },
     {
       "path": "docs/mapeo_codigo.md",
@@ -172,8 +172,8 @@
     },
     {
       "path": "output/pdf/informe_casadsl.pdf",
-      "bytes": 333615,
-      "sha256": "e40b703b1984f05a5acf8d7d37f32c8f3f2a635be3be1e6b5573a17b51e9e18e"
+      "bytes": 333571,
+      "sha256": "a1cb12d34310f6cd3756d5308aecd4ca86ea94817734856483e08cb230fd535d"
     },
     {
       "path": "output/resultados_pruebas.csv",
@@ -202,8 +202,8 @@
     },
     {
       "path": "scripts/build_report.py",
-      "bytes": 30795,
-      "sha256": "27875571c8f0597c9387cef5090040cb003794e471ab1ecfe5b680fc82b3251d"
+      "bytes": 30743,
+      "sha256": "2329902a4bfcbf034d976834706c25f078337e24739b327e3f951e916b4c8025"
     },
     {
       "path": "scripts/package_project.py",
