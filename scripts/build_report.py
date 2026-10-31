@@ -150,7 +150,7 @@ def main():
     table(["Dato", "Información"], [
         ["Integrantes", ", ".join(meta["integrantes"]) or "Pendiente: completar los nombres del grupo antes de entregar."],
         ["Asignatura", meta["asignatura"]],
-        ["Preparación", meta["fecha_preparacion"] + " (no corresponde a una fecha límite del curso)"],
+        ["Preparación", meta["fecha_preparacion"]],
         ["Repositorio", meta["repositorio"] or "Pendiente: incorporar la URL real de GitHub en el anexo."],
         ["Validación", f"{report['summary']['passed']}/{report['summary']['total']} casos documentados; {test_count} pruebas automatizadas aprobadas."],
     ], [105, WIDTH - 105])
